@@ -1,0 +1,52 @@
+* {
+  text-align: center;
+  color: #2F9AD4;
+  font-family: 'Inconsolata', monospace;
+  margin: 0;
+}
+
+
+.container {
+  /*background-color: #636A6D;*/
+  background-color: #c5c8cc;
+}
+
+input {
+  margin: 50px auto 10px auto;
+  width: 45%;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+#decisions {
+  padding: 30px;
+  height: 60px;
+  font-size: 1.5em;
+}
+
+#cash {
+  padding: 10px;
+  font-size: 30px;
+  color: #216C2A;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+button {
+  padding: 8px;
+  border: none;
+  background-color: #f4f5f7;
+  margin: 10px;
+  width: 76px;
+}
+
+#countdown {
+  padding: 10px;
+  font-size: 30px;
+  color: #2F9AD4;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

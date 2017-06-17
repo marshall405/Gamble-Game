@@ -1,9 +1,11 @@
 function loser() {
   userCash = userCash - num;
-  input.value = '';
-   if(userCash <= 0) {
+  
+  if(userCash <= 0) {
         dots.innerHTML = "GAME OVER";
       } else {
-        dots.innerHTML = 'YOU LOSE';
+        dots.innerHTML = 'YOU LOSE $' + input.value;
       }
+  input.value = '';
+   
 }

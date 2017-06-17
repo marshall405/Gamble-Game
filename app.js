@@ -11,8 +11,11 @@ var compNum; //used to store random number
 var num; // used to store input number
 var i;
 var count = 100;
+var countDownBegin = true;
 cash.innerHTML = '$ ' + userCash;
 dots.innerHTML = 'PLACE BET';
+
+luckystreak = 0;
 
 var frame = setInterval(start,500);
 input.addEventListener('keydown', function(e) {
@@ -28,17 +31,19 @@ input.addEventListener('keydown', function(e) {
     num = parseFloat(input.value);
     
     if(num <= userCash && !isNaN(num)) {
-
-      userNum = Math.floor(Math.random() * 100) + 1;
+      
+      userNum = Math.floor(Math.random() * 10000) + 1;
       compNum = Math.floor(Math.random() * 100) + 1;
       
       //Below compares the two numbers and decides which one is greater.
         if(userNum > compNum) { //user wins
+          luckystreak++;
           winner();
         } else if (userNum === compNum) { //its a draw
           draw();
         } else { // user loses
           loser();
+          luckystreak = 0;
         }
       
       cash.innerHTML = '$ ' + userCash;
